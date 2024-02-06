@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}Survey{% endblock %}
+
+{% block content %}
+    <h1>Survey</h1>
+    <form action="/submit" method="post">
+        <p>{{ question }}</p>
+        <label for="python">Python</label>
+        <input type="radio" id="python" name="answer" value="Python" required>
+        <label for="javascript">JavaScript</label>
+        <input type="radio" id="javascript" name="answer" value="JavaScript" required><br>
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}
+
